@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.spin-animation {
+  animation: spin-clockwise 3s infinite linear;
+}
+
+.spin-animation-cw {
+  animation: spin-counter-clockwise 3s infinite linear;
+}
+
+@keyframes spin-clockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-counter-clockwise {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.section--transition {
+  @apply transition-all duration-1000 ease-out;
+}
+
+.section--hidden {
+  @apply opacity-0 translate-y-32;
+}

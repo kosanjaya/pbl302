@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.button-bundle {
+  @apply bg-[#21a49f] hover:bg-[#121312] hover:shadow-[0_0_40px_0_rgba(24,209,203,1)_inset] hover:outline hover:outline-2 hover:outline-offset-4 hover:outline-[#21a49f] active:scale-90 transition-all duration-300 ease-out text-[#EBF0F9] text-[1rem] font-sans font-medium tracking-wider;
+}
+
+.input-bundle {
+  @apply bg-secondary outline-none focus:outline-2 focus:outline-offset-4 focus:outline-[#21a49f] rounded-md text-white text-[1rem] font-sans font-light tracking-wider transition-all duration-300 ease-out;
+}
+
+.spin-animation {
+  animation: spin-clockwise 3s infinite linear;
+}
+
+.spin-animation-cw {
+  animation: spin-counter-clockwise 3s infinite linear;
+}
+
+.floating {
+  animation: floating 5000ms ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes spin-clockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-counter-clockwise {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.section--transition {
+  @apply transition-all duration-1000 ease-out;
+}
+
+.section--hidden {
+  @apply opacity-0 translate-y-32;
+}
+
+.text-red-critical {
+  @apply text-[#e01e37];
+}
+
+.text-orange-high {
+  @apply text-[#f77f00];
+}
+
+.text-yellow-medium {
+  @apply text-[#ffb700];
+}
+
+.text-green-low {
+  @apply text-[#2b9348];
+}
+
+.text-regular {
+  @apply text-[#d8d8d8];
+}
